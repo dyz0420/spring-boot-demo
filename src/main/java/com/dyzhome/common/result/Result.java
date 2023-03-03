@@ -30,6 +30,15 @@ public class Result implements Serializable {
         return res;
     }
 
+    public static Result success(Object data) {
+        Result res = new Result();
+        res.setSuccess(R.SUCCESSFUL_OPERATION.getSuccess());
+        res.setCode(R.SUCCESSFUL_OPERATION.getCode());
+        res.setMsg(R.SUCCESSFUL_OPERATION.getMessage());
+        res.setData(data);
+        return res;
+    }
+
     public static Result success(R r) {
         Result res = new Result();
         res.setSuccess(r.getSuccess());
