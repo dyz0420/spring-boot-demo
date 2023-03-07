@@ -1,9 +1,19 @@
 server:
   port: 8080
 spring:
-  datasource:
-    druid:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/micro_video?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
-      username: root
-      password: 123456
+  profiles:
+    active: dev
+# 接口文档
+knife4j:
+  enable: true
+  openapi:
+    title: 开发文档
+    description: "项目文档"
+    concat: Dyz
+    version: v1.0
+    group:
+      test1:
+        group-name: group
+        api-rule: package
+        api-rule-resources:
+          - com.dyzhome.controller

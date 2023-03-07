@@ -18,19 +18,19 @@ public enum R {
     SUCCESS_REGISTER(true, 200, "注册成功，请登录"),
     SUCCESS_UPLOAD_VIDEO(true, 200, "视频上传成功！请等待管理员审核！"),
     SUCCESS_CHANGE_INFO(true, 200, "信息修改成功"),
-    SUCCESS_DONE(true, 200, "操作成功！"),
+    SUCCESS_OPTION(true, 200, "操作成功！"),
     SUCCESS_COMMENT(true, 200, "评论成功！"),
     SUCCESS_REPLY(true, 200, "回复成功！"),
     SUCCESS_DEL(true, 200, "删除成功！"),
     SUCCESS_CHANGE_PASS(true, 200, "密码修改成功，请重新登录。"),
     //250-->不用提示给用户的成功消息
-    SUCCESSFUL_OPERATION(true, 250, "成功！"),
+    SUCCESSFUL_DONE(true, 250, "成功！"),
 
     //400-->可提示给用户的错误/失败消息
     NOT_LOGIN(false, 444, "您尚未登录，请先登录"),
     Login_TIMEOUT(false, 444, "登录超时，请重新登录"),
     NOT_PERMISSION(false, 446, "当前帐号为普通用户账号，您无权操作！请向管理员申请权限！"),
-    VIDEO_NOTFOUND(false, 445, "该视频不存在！"),
+    NOTFOUND_ERROR(false, 445, "该资源不存在"),
     ERROR_EMAIL(false, 450, "请填写正确的邮箱！"),
     ERROR_RESET_PASS(false, 450, "重置密码出错，请重新验证身份！"),
     ACCOUNT_BANNED(false, 450, "该账号封禁中，请联系管理员！"),

@@ -19,8 +19,20 @@
         <hutool.version>5.8.11</hutool.version>
         <mapstruct.version>1.5.3.Final</mapstruct.version>
         <druid.version>1.2.8</druid.version>
+        <knife4j.version>4.0.0</knife4j.version>
     </properties>
     <dependencies>
+        <!-- knife4j文档工具 -->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-openapi2-spring-boot-starter</artifactId>
+            <version>${knife4j.version}</version>
+        </dependency>
+        <!--参数校验-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
         <!--redis-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
