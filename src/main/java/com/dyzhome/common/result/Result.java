@@ -35,17 +35,17 @@ public class Result implements Serializable {
 
     public static Result success() {
         Result res = new Result();
-        res.setSuccess(R.SUCCESSFUL_OPERATION.getSuccess());
-        res.setCode(R.SUCCESSFUL_OPERATION.getCode());
-        res.setMsg(R.SUCCESSFUL_OPERATION.getMessage());
+        res.setSuccess(R.SUCCESSFUL_DONE.getSuccess());
+        res.setCode(R.SUCCESSFUL_DONE.getCode());
+        res.setMsg(R.SUCCESSFUL_DONE.getMessage());
         return res;
     }
 
     public static Result success(Object data) {
         Result res = new Result();
-        res.setSuccess(R.SUCCESSFUL_OPERATION.getSuccess());
-        res.setCode(R.SUCCESSFUL_OPERATION.getCode());
-        res.setMsg(R.SUCCESSFUL_OPERATION.getMessage());
+        res.setSuccess(R.SUCCESSFUL_DONE.getSuccess());
+        res.setCode(R.SUCCESSFUL_DONE.getCode());
+        res.setMsg(R.SUCCESSFUL_DONE.getMessage());
         res.setData(data);
         return res;
     }
