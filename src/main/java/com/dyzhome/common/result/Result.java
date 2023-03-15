@@ -35,17 +35,18 @@ public class Result implements Serializable {
 
     public static Result success() {
         Result res = new Result();
-        res.setSuccess(R.SUCCESSFUL_DONE.getSuccess());
-        res.setCode(R.SUCCESSFUL_DONE.getCode());
-        res.setMsg(R.SUCCESSFUL_DONE.getMessage());
+        res.setSuccess(R.SUCCESS_DONE.getSuccess());
+        res.setCode(R.SUCCESS_DONE.getCode());
+        res.setMsg(R.SUCCESS_DONE.getMessage());
+        res.setData(null);
         return res;
     }
 
     public static Result success(Object data) {
         Result res = new Result();
-        res.setSuccess(R.SUCCESSFUL_DONE.getSuccess());
-        res.setCode(R.SUCCESSFUL_DONE.getCode());
-        res.setMsg(R.SUCCESSFUL_DONE.getMessage());
+        res.setSuccess(R.SUCCESS_DONE.getSuccess());
+        res.setCode(R.SUCCESS_DONE.getCode());
+        res.setMsg(R.SUCCESS_DONE.getMessage());
         res.setData(data);
         return res;
     }
@@ -55,6 +56,7 @@ public class Result implements Serializable {
         res.setSuccess(r.getSuccess());
         res.setCode(r.getCode());
         res.setMsg(r.getMessage());
+        res.setData(null);
         return res;
     }
 
@@ -72,6 +74,7 @@ public class Result implements Serializable {
         res.setSuccess(r.getSuccess());
         res.setCode(r.getCode());
         res.setMsg(r.getMessage());
+        res.setData(null);
         return res;
     }
 

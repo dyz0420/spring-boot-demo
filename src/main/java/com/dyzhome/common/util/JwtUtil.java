@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * JWT工具类
  * @author Dyz
  */
 public class JwtUtil {
@@ -51,8 +52,8 @@ public class JwtUtil {
     public static Long parseToken(String token) {
         //创建解析对象，使用的算法和secret要和创建token时保持一致
         JWTVerifier jwtVerifier = JWT.require(Algorithm.HMAC256(SECRET)).build();
-        DecodedJWT decodedJWT = jwtVerifier.verify(token);
-        Claim claim = decodedJWT.getClaim("userId");
+        DecodedJWT decodedJwt = jwtVerifier.verify(token);
+        Claim claim = decodedJwt.getClaim("userId");
         return claim.asLong();
     }
 
