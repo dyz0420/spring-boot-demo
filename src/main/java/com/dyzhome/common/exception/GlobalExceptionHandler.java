@@ -9,6 +9,10 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import javax.validation.ConstraintViolation;
+import javax.validation.ConstraintViolationException;
+import java.util.Iterator;
+
 /**
  * 全局异常处理
  *
@@ -51,6 +55,19 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public Result handelJsrException(MethodArgumentNotValidException ex) {
         String message = ex.getAllErrors().get(0).getDefaultMessage();
+        return Result.error(R.VALID_PARAM_ERROR, message);
+    }
+
+    /**
+     * 参数校验异常
+     *
+     * @param ex 异常
+     * @return 结果
+     */
+    @ExceptionHandler(ConstraintViolationException.class)
+    public Result handelValidException(ConstraintViolationException ex) {
+        Iterator<ConstraintViolation<?>> iterator = ex.getConstraintViolations().iterator();
+        String message = iterator.hasNext() ? iterator.next().getMessage() : "";
         return Result.error(R.VALID_PARAM_ERROR, message);
     }
 
