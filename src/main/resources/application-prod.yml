@@ -20,3 +20,5 @@ spring:
 logging:
   level:
     com.dyzhome: error
+
+file-save-path: /myProj/static/

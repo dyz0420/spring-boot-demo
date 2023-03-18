@@ -34,6 +34,8 @@ public enum R {
     NOTFOUND_ERROR(false, 445, "该资源不存在"),
     //500-->发生错误
     ERROR_EMAIL(false, 500, "请填写正确的邮箱！"),
+    REPEAT_EMAIL(false, 500, "该邮箱已被注册！请登录。"),
+    CAPTCHA_GEN_FAIL(false, 500, "验证码生成失败，请重试。"),
     ERROR_RESET_PASS(false, 500, "重置密码出错，请重新验证身份！"),
     ACCOUNT_BANNED(false, 500, "该账号封禁中，请联系管理员！"),
     LOGIN_ERROR(false, 500, "用户名或密码错误"),
@@ -44,7 +46,7 @@ public enum R {
     FAIL_CHANGE_INFO(false, 500, "信息修改失败，请重试"),
     FAIL_UPLOAD_VIDEO(false, 500, "视频上传失败，请重试"),
     KEYCODE_TIMEOUT(false, 500, "验证码过期，请刷新"),
-    MAIL_CODE_TIMEOUT(false, 500, "验证码过期，请重新发送"),
+    CODE_TIMEOUT(false, 500, "验证码过期，请重新发送"),
     PASSWORD_NOT_MATCH(false, 500, "两次密码不一致，请重试"),
     REGISTER_FAIL(false, 500, "注册失败"),
     ERROR_PASSWORD(false, 500, "原密码错误，请重试"),
@@ -58,6 +60,7 @@ public enum R {
     FAIL_COMMENT(false, 500, "评论失败！"),
     DATA_TOO_LONG(false, 500, "分类名不可超过6个字符！"),
     VALID_PARAM_ERROR(false, 500, "参数校验不合法"),
+    ERROR_FILE_TYPE(false, 500, "文件格式错误"),
     //400-->不提示的失败消息
     FAIL_OPERATION(false, 400, "失败！");
 

@@ -20,3 +20,5 @@ spring:
 logging:
   level:
     com.dyzhome: debug
+
+file-save-path: D:/uploadFile/

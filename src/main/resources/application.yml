@@ -3,6 +3,10 @@ server:
 spring:
   profiles:
     active: dev
+  servlet:
+    multipart:
+      max-file-size: 300MB
+      max-request-size: 300MB
 # 接口文档
 knife4j:
   enable: true
